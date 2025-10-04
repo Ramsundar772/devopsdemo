@@ -1,6 +1,6 @@
-FROM UBUNTU
-RUN APT-GET UPDATE
-RUN APT-GET -Y INSTALL APACHE2
-ADD . /VAR/WWW/HTML
-ENTRYPOINT APACHECTL -D FOREGROUND
-ENV NAME RAMZZZ
+FROM ubuntu
+RUN apt-get update
+RUN apt-get -y install apache2
+ADD . /var/www/html
+ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
+ENV name Devops Tutorial
